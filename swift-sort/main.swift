@@ -8,5 +8,22 @@
 
 import Foundation
 
-print("Hello, World!")
+var somenum:[Int]=[15,50,30,20,45,100,19,27,5,80]
+var temp=0
+
+for i in 0..<somenum.count
+{
+    for j in 0..<somenum.count-(i+1)   {
+        if (somenum[j]>somenum[j+1])
+        {
+            temp=somenum[j]
+            somenum[j]=somenum[j+1]
+            somenum[j+1]=temp
+        }
+    }
+}
+for i in 0..<somenum.count
+{
+    print(somenum[i])
+}
 
